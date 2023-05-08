@@ -27,30 +27,29 @@ public class Prodotto {
 	public String getName() {
 		return name;
 	}
-	private void setName(String name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 	public String getDescr() {
 		return descr;
 	}
-	private void setDescr(String descr) {
+	public void setDescr(String descr) {
 		this.descr = descr;
 	}
 	public float getPrice() {
 		return price;
 	}
-	private void setPrice(float price) {
+	public void setPrice(float price) {
 		this.price = price;
 	}
 	public float getIva() {
 		return iva;
 	}
-	private void setIva(float iva) {
+	public void setIva(float iva) {
 		this.iva = iva;
 	}
 	public float totalPrice (float price, float iva) {
-		float totiva = price * iva / 100;
-		float totprice = price + totiva;
+		float totprice = (price * iva / 100) + price;
 		return totprice;
 	}
 	public String codeName (int code, String name) {
