@@ -21,17 +21,20 @@ public class Bank {
 			double balance = account.getBalance();
 			if(num == 1) {
 				
-				System.out.println(account.infoAccount(n_account,nameaccount,balance)); ;
+				System.out.println(account.infoAccount(n_account,nameaccount,balance));
+				System.out.println("----------------------");
 			}
 			else if(num == 2) {
 				System.out.println("Quanto vuoi prelevare?");
 				int sum = in.nextInt();
-				account.Withdraw(sum,balance);
+				System.out.println("Il tuo saldo attuale: " + account.Withdraw(sum) + "Euro");
+				System.out.println("----------------------");
 			}
 			else if(num == 3) {
 				System.out.println("Quanto vuoi depositare");
 				int sum = in.nextInt();
-				System.out.println("Il tuo saldo attuale: " + account.Pay( sum, balance) + "Euro");
+				System.out.println("Il tuo saldo attuale: " + account.Pay( sum) + "Euro");
+				System.out.println("----------------------");
 			}
 			else if(num == 4) {
 				System.out.println("Grazie per averci scelto");
@@ -39,6 +42,7 @@ public class Bank {
 			}
 			else {
 				System.out.println("Hai inserito un valore sbagliato");
+				System.out.println("----------------------");
 			}
 		}
 		

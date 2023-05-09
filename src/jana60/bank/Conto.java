@@ -38,18 +38,18 @@ public class Conto {
 				"\nSaldo: " +
 				totalbalance;
 	}
-	public double Pay(double sum, double balance) {
-		double newbalance = sum + balance;
-		return newbalance;
+	public double Pay(double sum) {
+		this.balance += sum;
+		return this.balance;
 	}
-	public double Withdraw(double sum, double balance) {
+	public double Withdraw(double sum) {
 		if(sum > balance) {
 			 System.out.println("Mi dispiace non puoi prelevare più del tuo saldo");
-			 return balance;
+			 return this.balance;
 		}
 		else {
-			this.balance = balance - sum;
-			return balance;
+			this.balance -= sum;
+			return this.balance;
 		}
 			
 		
